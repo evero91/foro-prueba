@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>foro</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="growl" showDetail="true"/>
+            
+            <p:panelGrid>
+                <p:row>
+                    <p:column>
+                        <p:outputLabel for="txtUsuario" value="Usuario"/>
+                    </p:column>
+                    <p:column>
+                        <p:inputText id="txtUsuario" value="#{indexBean.usuario}"/>
+                    </p:column>
+                </p:row>
+                <p:row>
+                    <p:column>
+                        <p:outputLabel for="txtContrasena" value="Contrasena"/>
+                    </p:column>
+                    <p:column>
+                        <p:password id="txtContrasena" value="#{indexBean.contrasena}"/>
+                    </p:column>
+                </p:row>
+                <p:row>
+                    <p:column colspan="2">
+                        <p:commandButton value="Iniciar Sesion" action="#{indexBean.iniciarSesion}" update="@form"/>
+                    </p:column>
+                </p:row>
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
